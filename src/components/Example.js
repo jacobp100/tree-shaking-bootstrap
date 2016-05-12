@@ -5,7 +5,7 @@ import {
   container, navbar, navbarLight, bgFaded, navbarToggler, hiddenSmUp, collapse, navbarToggleableXs,
   navbarBrand, nav, navbarNav, navItem, active, navLink, srOnly, formInline, pullXsRight, btn,
   btnSuccessOutline, formControl, jumbotron, btnLg, btnPrimary,
-} from '../../styles/bootstrap';
+} from '../../styles/bootstrap.m.css';
 
 export default () => (
   <div className={container}>

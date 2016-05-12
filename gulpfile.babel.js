@@ -1,5 +1,4 @@
 import { flow, camelCase } from 'lodash/fp';
-import { join } from 'path';
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
@@ -41,12 +40,9 @@ gulp.task('compile-css', ['compile-bootstrap'], () => (
 gulp.task('compile-js', ['compile-css'], (cb) => (
   webpack({
     entry: './src/index',
-    devtool: 'source-map',
     output: {
-      path: join(__dirname, '/dist'),
+      path: './dist',
       filename: 'index.js',
-      library: 'bootstrapDemo',
-      libraryTarget: 'umd',
     },
     module: {
       loaders: [
@@ -56,9 +52,6 @@ gulp.task('compile-js', ['compile-css'], (cb) => (
           loader: 'babel',
         },
       ],
-    },
-    resolve: {
-      extensions: ['', '.webpack.js', '.web.js', '.js', '.css.js'],
     },
   }, err => {
     cb(err);
