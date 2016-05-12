@@ -29,7 +29,9 @@
     "webpack": "^1.13.0"
   },
   "dependencies": {
+    "autoprefixer": "^6.3.6",
     "classnames": "^2.2.5",
+    "css-class-generator": "^1.0.1",
     "lodash": "^4.12.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2"
